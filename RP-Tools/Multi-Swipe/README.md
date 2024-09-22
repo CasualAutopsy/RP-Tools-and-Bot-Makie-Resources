@@ -6,23 +6,29 @@ Putting it in a context menu is recommended.
 ---
 ## Requirements
 **-Extensions-**
+
 LALib:
 https://github.com/LenAnderson/SillyTavern-LALib
 
 **-Plugins-**
+
 ***None***
 
 ---
 ## QRs
 
 **Swipes - Multi:**
+
 TODO
 
 **Swipes - Count:**
+
 TODO
 
 **Swipes - Testing:**
+
 TODO
 
 **Swipes - Set Seeds:**
+
 TODO
