@@ -1,0 +1,32 @@
+﻿# Main role-play rule
+rp ::= cont paraStart paraMid paraEnd
+
+
+# Paragraphing rules
+paraStart ::= ( paraFormat | narative )
+paraMid ::= ( newparagraph paraFormat ( newparagraph paraFormat ( newparagraph paraFormat )? )? )
+paraEnd ::= ( newparagraph ( paraFormat | narative ) )?
+
+# Continue rule
+cont ::= ( newparagraph | singleSpace | ( ( contNarative | contDialogue ) ( newparagraph | singleSpace ) ) )?
+
+# Paragraph formatting rule
+paraFormat ::= ( ( narative singleSpace dialogue ( singleSpace narative singleSpace dialogue ( singleSpace narative ( singleSpace dialogue )? )? )? ) | ( dialogue singleSpace narative ( singleSpace dialogue singleSpace narative ( singleSpace dialogue ( singleSpace narative )? )? )? ) )
+
+
+# Continue markdown rules
+contNarative ::= ( [A-Za-z'.?!,:;—…‼⁈⁇⁓~-à-üÀ-Ü0-9]+ " " )* [A-Za-z'.?!,:;—…‼⁈⁇⁓~-à-üÀ-Ü0-9]+ "*"
+contDialogue ::= [A-Za-z'.*?!,:;—…‼⁈⁇⁓~-à-üÀ-Ü0-9]* (" " [A-Za-z'.*?!,:;—…‼⁈⁇⁓~-à-üÀ-Ü0-9]+)* "\""
+
+# Markdown rules
+narative ::= "*" ( [A-Za-z'.?!,:;—…‼⁈⁇⁓~-à-üÀ-Ü0-9]+ " " )* [A-Za-z'.?!,:;—…‼⁈⁇⁓~-à-üÀ-Ü0-9]+ "*"
+dialogue ::= "\"" [A-ZÀ-Ü] [A-Za-z'.*?!,:;—…‼⁈⁇⁓~-à-üÀ-Ü0-9]* (" " [A-Za-z'.*?!,:;—…‼⁈⁇⁓~-à-üÀ-Ü0-9]+)* "\""
+
+
+
+# Main rule
+root ::= rp
+
+# Misc rules
+singleSpace ::= " "
+newparagraph ::= "\n\n"
