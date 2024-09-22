@@ -19,16 +19,16 @@ https://github.com/LenAnderson/SillyTavern-LALib
 
 **Swipes - Multi:**
 
-TODO
+The main QR. Swipe multiple times in a row.
 
 **Swipes - Count:**
 
-TODO
+Change the amount of times to swipe in a row. (Default: 3)
 
 **Swipes - Testing:**
 
-TODO
+Swipe on multiple specific seeds for testing prompts or sampler settings.
 
 **Swipes - Set Seeds:**
 
-TODO
+Set the specific seeds to swipe on. The more seeds you add, the more times you'll swipe in a row. (Default: 42, 1337, 69420)
